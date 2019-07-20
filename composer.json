@@ -52,6 +52,9 @@
             "dev-master": "1.0.x-dev"
         },
         "config-plugin": {
+            "tests": [
+                "config/test.php"
+            ],
             "web": [
                 "config/web.php"
             ]
