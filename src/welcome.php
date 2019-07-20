@@ -24,7 +24,7 @@ MailAsset::register($this);
     <?php endif ?>
 <?= Html::endTag('p') ?>
 
-<?php if ($token !== null) : ?>
+<?php if ($tokenUrl !== null) : ?>
     <?= Html::beginTag('p', ['class' => 'mailer-welcome']) ?>
         <?= \Yii::t('mail.views.user', 'In order to complete your registration, please click the link below.') ?>
     <?= Html::endTag('p') ?>
