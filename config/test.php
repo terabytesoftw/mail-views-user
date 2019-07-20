@@ -19,6 +19,13 @@ $config = [
         'assetManager' => [
             'basePath' => '@public/assets',
         ],
+        'i18n' => [
+            'translations' => [
+                'mail.views.user' => [
+                    'class' => yii\i18n\PhpMessageSource::class,
+                ],
+            ],
+        ],
         'log' => [
             'traceLevel' => 'YII_DEBUG' ? 3 : 0,
             'targets' => [
@@ -31,11 +38,6 @@ $config = [
                     'logFile' => '@runtime/logs/app.log',
                 ],
             ],
-        ],
-        'mailer' => [
-            'class' => \yii\swiftmailer\Mailer::class,
-            'enableSwiftMailerLogging' => true,
-            'useFileTransport' => true,
         ],
         'request' => [
             'cookieValidationKey' => 'test.mail.views.user',
