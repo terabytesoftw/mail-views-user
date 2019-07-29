@@ -16,7 +16,7 @@
     <?= '<b>' . $password . '</b>' ?>
 <?php endif ?>
 
-<?php if ($tokenUrl !== null) : ?>
+<?php if (!empty($tokenUrl)) : ?>
     <?= \Yii::t('mail.views.user', 'In order to complete your registration, please click the link below.') ?>
     <?= '<b>' . $tokenUrl . '</b>' ?>
     <?= \Yii::t('mail.views.user', 'If you cannot click the link, please try pasting the text into your browser.') ?>

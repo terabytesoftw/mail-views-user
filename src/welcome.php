@@ -20,11 +20,11 @@ MailAsset::register($this);
 <?= Html::beginTag('p', ['class' => 'mailer-welcome']) ?>
     <?= \Yii::t('mail.views.user', 'Your account on {0} has been created.', [\Yii::$app->name]) ?>
     <?php if ($showPassword || $accountGeneratingPassword) : ?>
-        <?= \Yii::t('mail.views.user', 'We have generated a password for you') ?>: <strong><?= $user->password ?></strong>
+        <?= \Yii::t('mail.views.user', 'We have generated a password for you') ?>: <strong><?= $password ?></strong>
     <?php endif ?>
 <?= Html::endTag('p') ?>
 
-<?php if ($tokenUrl !== null) : ?>
+<?php if (!empty($tokenUrl)) : ?>
     <?= Html::beginTag('p', ['class' => 'mailer-welcome']) ?>
         <?= \Yii::t('mail.views.user', 'In order to complete your registration, please click the link below.') ?>
     <?= Html::endTag('p') ?>
